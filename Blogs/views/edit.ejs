@@ -1,0 +1,27 @@
+<%- include('./partials/header') %>
+
+<h1>Form to edit a Blog</h1>
+
+<form action="/blogs/<%=foundProduct.id%>?_method=PATCH" method="POST">
+    
+    <section>
+        <label for="blog">Title: </label>
+        <br>
+        <textarea name="title" id="blog" cols="30" rows="4"> <%=foundProduct.title%> </textarea>
+    </section>
+    <section>
+        <label for="blog">Author: </label>
+        <br>
+        <textarea name="author" id="blog" cols="30" rows="4"> <%=foundProduct.author%> </textarea>
+    </section>
+    <section>
+        <label for="blog">Comment: </label>
+        <br>
+        <textarea name="comment" id="blog" cols="30" rows="4"> <%=foundProduct.comment%> </textarea>
+    </section>
+    
+    <button type="submit">Edit blog</button>
+</form>
+
+
+<%- include('./partials/footer') %>
